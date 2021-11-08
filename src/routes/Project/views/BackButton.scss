@@ -1,0 +1,28 @@
+@import 'styles/variables';
+
+.BackButton {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: $margin-md;
+  padding: $margin-sm 0;
+
+  &__arrow {
+    width: 30px;
+    height: 30px;
+    border-radius: $radius-md;
+    border: 1px solid $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    path {
+      fill: $black;
+    }
+  }
+}

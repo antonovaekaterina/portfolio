@@ -1,0 +1,50 @@
+@import 'styles/variables';
+
+.Header {
+  padding: $margin-md 0 32px;
+  border-bottom: 1px solid $pink-2;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__profile {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: opacity $effect-short;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__profile-avatar {
+    border-radius: 50%;
+    margin-right: $margin-sm;
+    width: 61px;
+    height: 61px;
+    object-fit: cover;
+    border: 1px solid $black;
+  }
+
+  &__profile-name {
+    color: $black;
+    font-weight: 600;
+  }
+
+  &__profile-description {
+    position: relative;
+    margin-top: 4px;
+  }
+
+  &__nav-link {
+    margin-left: $margin-sm;
+
+    &--selected {
+      text-decoration: underline !important;
+    }
+  }
+}

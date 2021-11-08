@@ -1,0 +1,67 @@
+@import 'styles/variables';
+
+.ProjectTask {
+  display: flex;
+  flex-direction: column;
+  background: $grey-2;
+  border-radius: $radius-md;
+  padding: $margin-sm;
+
+  & > * {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: $margin-xs;
+  }
+
+  &__description {
+    margin-top: 8px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-top: $margin-sm;
+    }
+
+    &:before {
+      flex: 0 0 auto;
+      content: '–';
+      margin-right: 5px;
+      display: block;
+    }
+  }
+
+  &__external-link {
+    margin-top: auto;
+    margin-left: auto;
+    width: auto;
+    color: $blue-2 !important;
+    font-size: 14px !important;
+  }
+
+  &__img-wrap {
+    background: white;
+    position: relative;
+    border-radius: $radius-sm;
+    border: 1px solid $lilac;
+    overflow: hidden;
+    width: 500px;
+    height: 350px;
+    flex: 0 0 auto;
+
+    &:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba($lilac, 0.1));
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

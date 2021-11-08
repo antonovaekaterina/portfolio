@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "useDefineForClassFields": true,
+    "baseUrl": "src",
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "target": "es2017",
+    "module": "ES6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "paths": {
+      "images/*": [ "../public/images/*" ],
+      "shared/*": [ "shared/*" ],
+      "routes/*": [ "routes/*" ],
+      "data/*": [ "data/*" ],
+    },
+  }
+}

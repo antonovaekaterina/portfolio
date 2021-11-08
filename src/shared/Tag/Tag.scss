@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.Tag {
+  display: inline-flex;
+  font-size: 16px;
+  color: $blue-2;
+  border-radius: $radius-lg;
+  border: 1px solid $blue-2;
+  padding: 6px 10px;
+  text-decoration: none;
+  transition: all $effect-short;
+
+  &--selected {
+    background: $pink-2;
+    border: 1px solid $pink-2;
+    pointer-events: none;
+  }
+
+  &:hover {
+    border: 1px solid $black;
+    color: $black;
+  }
+}

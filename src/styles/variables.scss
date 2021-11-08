@@ -1,0 +1,49 @@
+/* colors */
+$yellow-1: #EFFD72;
+$yellow-2: #E2FA00;
+$yellow-3: #F8FFB6;
+$black: #323232;
+$pink-1: #D9005B;
+$pink-2: #f3d5e2;
+$green-1: #84E900;
+$green-2: #569700;
+$green-3: #A4F43D;
+$green-4: #EBF9DA;
+$lilac: #906CD7;
+$grey-1: #C4C4C4;
+$grey-2: #F6F6F6;
+$blue-1: #4711AE;
+$blue-2: #7746D7;
+$violet-1: #8805A8;
+
+/* styles */
+$margin-xs: 10px;
+$margin-sm: 16px;
+$margin-md: 48px;
+$margin-lg: 80px;
+
+$radius-sm: 4px;
+$radius-md: 10px;
+$radius-lg: 12px;
+
+$opacity: 50%;
+
+/* transition */
+$effect-long: linear 0.3s;
+$effect-short: linear 0.15s;
+
+/* media */
+$tablet: 992px;
+$mobile: 768px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}

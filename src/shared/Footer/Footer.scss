@@ -1,0 +1,15 @@
+@import 'styles/variables';
+
+.Footer {
+  margin-top: auto;
+
+  &__inner {
+    font-size: 12px;
+    padding-top: $margin-sm;
+    padding-bottom: $margin-sm;
+  }
+
+  &__link {
+    font-size: 12px !important;
+  }
+}

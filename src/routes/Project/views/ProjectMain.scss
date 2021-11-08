@@ -1,0 +1,27 @@
+@import 'styles/variables';
+
+.ProjectMain {
+  background: $pink-2;
+  border-radius: $radius-md;
+  padding: $margin-md 27px;
+  margin-bottom: $margin-md;
+
+  &__item {
+    display: flex;
+    margin-bottom: 36px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      width: 218px;
+      flex: 0 0 auto;
+    }
+  }
+
+  &__tag {
+    margin-right: $margin-xs;
+    margin-bottom: $margin-xs;
+  }
+}

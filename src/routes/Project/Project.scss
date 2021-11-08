@@ -1,0 +1,46 @@
+@import 'styles/variables';
+
+.Project {
+  margin-top: $margin-lg;
+
+  h1 {
+    margin-bottom: $margin-md;
+  }
+
+  &__external-link-wrap {
+    margin-bottom: $margin-md;
+    display: flex;
+    align-items: center;
+
+    svg path {
+      fill: $blue-2;
+    }
+  }
+
+  &__external-link {
+    margin-left: $margin-xs;
+  }
+
+  &__tasks {
+    margin-bottom: $margin-lg;
+
+    h3 {
+      margin-bottom: $margin-sm;
+    }
+  }
+
+  &__tasks-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(116px, 512px);
+    grid-gap: $margin-sm $margin-xs;
+  }
+
+  &__task {
+    height: 116px;
+
+    &--lg {
+      height: 512px;
+    }
+  }
+}

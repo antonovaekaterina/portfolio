@@ -1,0 +1,75 @@
+@import 'styles/variables';
+
+.ProjectCard {
+  $root: &;
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $blue-1;
+  height: 256px;
+  border-radius: $radius-md;
+  padding: 20px 12px;
+  transition: all $effect-short;
+  text-decoration: none;
+
+  &:hover {
+    border-color: $pink-2;
+    background: $pink-2;
+
+    #{$root}__link {
+      text-decoration: underline;
+    }
+  }
+
+  & > * {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    margin: 2px 0 8px;
+  }
+
+  &__time {
+    margin: 0;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__img-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-sm;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 0;
+      background: rgba($lilac, 0.3);
+      //background: linear-gradient(rgba($lilac, 0.5), rgba(255, 255, 255, 0.2));
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 125px;
+    width: 196px;
+  }
+
+  &__link {
+    font-family: 'RobotoSlab', serif;
+    font-size: 14px;
+    margin-left: auto;
+    text-decoration: none;
+    color: $blue-2;
+  }
+}

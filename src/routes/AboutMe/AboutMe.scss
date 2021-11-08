@@ -1,0 +1,19 @@
+@import 'styles/variables';
+
+.AboutMe {
+  &__content {
+    h1 {
+      margin: $margin-lg 0 $margin-md;
+    }
+
+    h3 {
+      margin-bottom: $margin-sm;
+    }
+
+    p {
+      margin-bottom: 24px;
+      line-height: 1.4;
+      max-width: 960px;
+    }
+  }
+}
