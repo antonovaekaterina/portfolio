@@ -31,7 +31,7 @@
 
   &__tasks-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
     grid-auto-rows: minmax(116px, 512px);
     grid-gap: $margin-sm $margin-xs;
   }
