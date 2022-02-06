@@ -28,8 +28,9 @@ module.exports = env => {
             assetModuleFilename: 'assets/[hash][ext][query]',
         },
         devServer: {
-            hot: true,
-            contentBase: path.join(__dirname, 'dist'),
+            static: {
+                directory: path.join(__dirname, 'dist'),
+            },
             port: 9191,
             historyApiFallback: true,
         },
@@ -101,7 +102,7 @@ module.exports = env => {
             new CleanWebpackPlugin(),
             isDevelopment && new webpack.HotModuleReplacementPlugin(),
             new MiniCssExtractPlugin({
-                filename: isDevelopment ? 'index.css' : 'index.[contenthash].css',
+                filename: isDevelopment ? '[name].css' : '[name].[contenthash].css',
             }),
             new HtmlWebpackPlugin({
                 filename: 'index.html',

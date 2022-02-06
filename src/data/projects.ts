@@ -10,7 +10,6 @@ import rpgemPreview from './images/rpgem/preview.jpg';
 import kozhindevPreview from './images/kozhindev/preview.jpg';
 import kozhindevCase from './images/kozhindev/case.jpg';
 import kozhindevEvents from './images/kozhindev/events.jpg';
-import kozhindevLang from './images/kozhindev/lang.jpg';
 import maconPreview from './images/macon/preview.jpg';
 import eoraPreview from './images/eora/preview.jpg';
 import steroidsPreview from './images/steroids/preview.jpg';
@@ -21,8 +20,19 @@ import cakePreview from './images/cake/preview.jpg';
 import yandexPreview from './images/yandex/preview.jpg';
 import yandexChat from './images/yandex/chat.jpg';
 import yandexPacman from './images/yandex/pacman.jpg';
+import kopilkaPreview from './images/kopilka/preview.jpg';
 
 const projects: IProject[] = [
+    {
+        id: 'kopilka',
+        team: 'ООО «Дисконтный Клуб»',
+        stack: ['Typescript', 'React', 'Redux', 'React Query', 'Ant Design', 'Webpack'],
+        time: '11.2021-02.2022',
+        title: 'Копилка',
+        shortDescription: 'Админка для программы лояльности',
+        preview: kopilkaPreview,
+        description: 'Личный кабинет для управления программой лояльности. Используется маркетологами торговых сетей «Командор» и «Аллея». В кабинете можно создавать акции, делать рассылку, управлять бонусами, формировать аудитории, строить отчеты и т.д.',
+    },
     {
         id: 'leaksdb',
         team: 'KozhinDev',
@@ -56,23 +66,18 @@ const projects: IProject[] = [
         tasks: [
             {
                 title: 'Разработка модуля для SSR',
-                externalLink: 'https://github.com/steroids/ssr',
-                description: ['Node.js модуль для серверного рендеринга React-приложения с предварительной загрузкой Redux-стора и данных с бэкенда', 'Работает в связке со Steroids'],
+                gitHub: 'https://github.com/steroids/ssr',
+                description: 'Разработка Node.js модуля для серверного рендеринга React-приложения с предварительной загрузкой Redux-стора и данных с бэкенда. Модуль работает в связке со Steroids.',
                 img: steroidsSsr,
             },
             {
                 title: 'Добавление UI-компонентов',
-                description: ['Таблица ключ-значение – content/Detail', 'Поле для загрузки и обрезки изображения – form/ImageField', 'Рекапча – form/reCaptchaField'],
-                externalLink: 'https://github.com/steroids/react/tree/master/src/ui',
+                description: 'Разработка компонентов: таблица ключ-значение – content/Detail, поле для загрузки и обрезки изображения – form/ImageField, рекапча – form/reCaptchaField.',
+                gitHub: 'https://github.com/steroids/react/tree/master/src/ui',
                 img: steroidsUi,
             },
-            {
-                title: 'Перевод классовых React-компонентов на функциональные',
-            },
-            {
-                title: 'Составление описаний к пропсам компонентов',
-            },
         ],
+        extra: 'Также занималась переводом библиотеки с классовых React-компонентов на функциональные и участвовала в составлении документации.',
     },
     {
         id: 'cakecrypt',
@@ -96,22 +101,22 @@ const projects: IProject[] = [
         externalLink: 'https://goldencruises.es/ru',
         tasks: [
             {
-                title: 'Главная страница',
+                title: 'Разработка главной страницы',
                 externalLink: 'https://goldencruises.es/ru',
                 img: gocIndex,
             },
             {
-                title: 'Вкладка с маршрутом',
+                title: 'Реализация вкладки с маршрутом',
                 externalLink: 'https://goldencruises.es/ru/catalog/6846041/info/route',
                 img: gocRoute,
             },
             {
-                title: 'Вкладка с палубами',
+                title: 'Реализация вкладки с палубами',
                 externalLink: 'https://goldencruises.es/ru/catalog/6846041/info/decks',
                 img: gocDeck,
             },
             {
-                title: 'Бронирование и оплата круиза',
+                title: 'Реализация бронирования и оплаты круиза',
                 externalLink: 'https://goldencruises.es/ru/catalog/11556911/booking',
                 img: gocBooking,
             },
@@ -121,7 +126,7 @@ const projects: IProject[] = [
                 img: gocMap,
             },
             {
-                title: 'Каталог и страницы компаний',
+                title: 'Разработка страниц круизных компаний',
                 externalLink: 'https://goldencruises.es/ru/companies',
                 img: gocCompanies,
             },
@@ -150,23 +155,17 @@ const projects: IProject[] = [
         preview: kozhindevPreview,
         tasks: [
             {
-                title: 'Страница кейса',
+                title: 'Реализация страницы кейса',
                 externalLink: 'https://kozhindev.com/projects/st-nicholas',
                 img: kozhindevCase,
             },
             {
-                title: 'Страница с событиями',
+                title: 'Реализация страницы с событиями',
                 externalLink: 'https://kozhindev.com/events',
                 img: kozhindevEvents,
             },
-            {
-                title: 'Добавление мультиязычности',
-                img: kozhindevLang,
-            },
-            {
-                title: 'Настройка SSR',
-            },
         ],
+        extra: 'Также добавляла на сайт мультиязычность и SSR.',
     },
     {
         id: 'macon',
@@ -193,13 +192,13 @@ const projects: IProject[] = [
                 title: 'Pacman на React',
                 externalLink: 'https://github.com/Geneva-yandex/Pacman/tree/dev',
                 img: yandexPacman,
-                description: ['Командная разработка', 'Игра реализована на Canvas', 'Подключены Service Workers для игры оффлайн', 'Добавлена форма обратной связи с сохранением данных в Mongo'],
+                description: 'Командная разработка игры на Canvas. Также были подключены Service Workers для игры оффлайн.',
             },
             {
                 title: 'Чат на JavaScript',
                 externalLink: 'https://github.com/antonovaekaterina/mf.messenger.praktikum.yandex',
                 img: yandexChat,
-                description: ['Самостоятельный проект', 'Написан на чистом JavaScript, не используются фреймворки', 'До подключения Webpack использовались ES6 модули', 'Деплой на Heroku'],
+                description: 'Реализация веб-чата на чистом JavaScript без использованя фреймворков.',
             },
         ],
     },

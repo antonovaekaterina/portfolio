@@ -6,10 +6,11 @@ export enum SizeEnum {
 
 export interface ITask {
     title: string,
-    description?: string[],
+    description?: string,
     externalLink?: string,
     img?: string
-    className?: string
+    className?: string,
+    gitHub?: string
 }
 
 export interface IProject {
@@ -23,5 +24,6 @@ export interface IProject {
     externalLink?: string,
     tasks?: ITask[],
     team?: string,
-    status?: string
+    status?: string,
+    extra?: string,
 }

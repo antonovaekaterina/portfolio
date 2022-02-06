@@ -1,0 +1,37 @@
+@import 'styles/variables';
+
+.ProjectSliderArrow {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: $radius-md;
+  border: 1px solid $blue-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity $effect-short;
+
+  &:hover {
+    opacity: $opacity;
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  path {
+    fill: $blue-1;
+  }
+
+  &--direction_right {
+    left: 40px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

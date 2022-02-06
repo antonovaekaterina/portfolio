@@ -16,21 +16,8 @@
   }
 
   &__description {
-    margin-top: 8px;
+    margin-top: 16px;
     font-size: 12px;
-    display: flex;
-    align-items: center;
-
-    &:first-child {
-      margin-top: $margin-sm;
-    }
-
-    &:before {
-      flex: 0 0 auto;
-      content: '–';
-      margin-right: 5px;
-      display: block;
-    }
   }
 
   &__external-link {

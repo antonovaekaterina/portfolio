@@ -14,7 +14,7 @@ export default function BackButton() {
             <div className={b('arrow')}>
                 <SVG src={arrow}/>
             </div>
-            <span>Назад</span>
+            <span>Проекты</span>
         </Link>
     );
 }

@@ -15,13 +15,7 @@ export default function ProjectTask(props: ITask) {
                     <img className={b('img')} src={props.img} alt={props.title}/>
                 </div>
             )}
-            {props.description && (
-                <div className={b('description-wrap')}>
-                    {props.description.map((text, idx) => (
-                        <p key={idx} className={b('description')}>{text}</p>
-                    ))}
-                </div>
-            )}
+            {props.description && <p className={b('description')}>{props.description}</p>}
             {props.externalLink && (
                 <a
                     href={props.externalLink}
@@ -30,6 +24,16 @@ export default function ProjectTask(props: ITask) {
                     target={'_blank'}
                 >
                     Посмотреть на сайте
+                </a>
+            )}
+            {props.gitHub && (
+                <a
+                    href={props.gitHub}
+                    rel={'noreferrer nofollow'}
+                    className={classNames(b('external-link'), 'nav')}
+                    target={'_blank'}
+                >
+                    GitHub
                 </a>
             )}
         </div>

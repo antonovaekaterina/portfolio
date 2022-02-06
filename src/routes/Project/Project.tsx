@@ -11,6 +11,7 @@ import ProjectMain from 'routes/Project/views/ProjectMain';
 import ProjectTask from 'routes/Project/views/ProjectTask';
 import ExternalLink from 'shared/ExternalLink/ExternalLink';
 import BackButton from 'routes/Project/views/BackButton';
+import ProjectSlider from 'routes/Project/views/ProjectSlider';
 
 const findProjectById = (id: string | undefined) => {
     if (!id) {
@@ -74,8 +75,14 @@ export default function Project(props: RouteChildrenProps<{project: string}>) {
                             </div>
                         </div>
                     )}
+                    {project.extra && (
+                        <div className={b('extra')}>
+                            <p>{project.extra}</p>
+                        </div>
+                    )}
                 </Container>
             </Container>
+            <ProjectSlider id={project.id}/>
         </article>
     );
 }

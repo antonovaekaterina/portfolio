@@ -1,0 +1,17 @@
+.ProjectSlider {
+  max-width: 1320px;
+  margin: 0 auto 80px;
+  padding: 0 6px 0 16px;
+
+  &__inner {
+    max-width: 1088px;
+
+    & > h3 {
+      margin-bottom: 32px;
+    }
+
+    .ProjectCard {
+      margin-right: 10px;
+    }
+  }
+}
